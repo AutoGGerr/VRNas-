@@ -3,15 +3,9 @@ body{
     font-family: "Chakra Petch";
 }
 
-.main{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 35px;
-}
 
 
-/* nav-section */
+/* ВЕКТОРА */
 .vector:nth-child(1){
     opacity: 0.2;
     position: absolute;  
@@ -28,6 +22,31 @@ body{
     height: auto;
 }
 
+.footer-vector{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: -10;
+    pointer-events: none;
+}
+/* ВЕКТОРА */
+
+
+
+.container{
+    position: relative;
+}
+
+.main{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+}
+
+
+/* nav-section */
+
 .container__nav{
     display: flex;
     max-height: 100px;
@@ -42,7 +61,7 @@ body{
     gap: 40px;
 }
 
-.nav-logo{
+.logo{
     width: 101px;
     height: 30px;
     opacity: 0.9;
@@ -275,10 +294,14 @@ body{
 
 
 /* second-section */
+.second-section{
+    margin-top: 100px;
+}
 
 .second-section__main{
     position: relative;
-    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .second-man .video-section{
@@ -303,7 +326,20 @@ body{
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 500;
+
 }
+
+.title__section{
+    font-weight: 500;
+    font-size: 48px;
+    margin: 0;
+    padding-top: 0px;
+}    
+
+.desc__section{
+    margin-top: 20px;
+}
+
 
 .second-bg{
     width: 400px;
@@ -336,6 +372,162 @@ body{
     width: 130px;
     height: 88px;
 }
+
+.second-poll{
+    display: flex;
+    height: 50px;
+    width: 400px;
+    gap: 10px;
+    align-items: center;
+}
+
+.second-poll img:nth-child(1){
+    width: 16px;
+    height: 16px;
+}
+
+.second-poll h1{
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 200;
+}
+
+.second-section__text button{
+    background: linear-gradient(45deg, #0CBAF1, #E95CE9);
+    text-transform: uppercase;
+    width: 206px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 14px;
+    margin-top: 12px;
+}
+
+/* second-section */
+
+
+
+/* footer */
+
+.footer__section{
+    margin-top: 250px;
+}
+
+.contacts{
+    display: flex;
+    gap: 15px;
+    margin-top: 140px;
+}
+
+.contact-button{
+    width: 46px;
+    height: 46px;
+    border: 1px solid transparent;
+    background: linear-gradient(#18181B, #18181B) padding-box, linear-gradient(45deg, #0CBAF1, #E95CE9) border-box;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-button:nth-child(1) .contact-button__img{
+    width: 18px;
+    height: 14px;
+}
+.contact-button:nth-child(2) .contact-button__img{
+    width: 10px;
+    height: 20px;
+}
+.contact-button:nth-child(3) .contact-button__img{
+    width: 22px;
+    height: 22px;
+}
+.contact-button:nth-child(4) .contact-button__img{
+    width: 21px;
+    height: 21px;
+}
+
+.footer__section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-sector__footer{
+    display: flex;
+    gap: 130px;
+}
+
+.info-footer__feedback{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.info-footer__feedback:nth-child(2) img{
+    width: 14px;
+    height: 16px;
+}
+
+.info-footer__feedback:nth-child(3) img{
+    width: 18px;
+    height: 16px;
+}
+
+.info-footer__feedback:nth-child(4) img{
+    width: 17px;
+    height: 17px;
+}
+
+.info-footer h1{
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+}
+
+.info-footer p{
+    font-size: 16px;
+    color: white;
+    font-weight: 100;
+    opacity: 0.8;
+}
+
+.footer-text{
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+
+.line{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(45deg, #0CBAF1, #E95CE9);
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
 
 
 
