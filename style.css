@@ -73,31 +73,44 @@ body{
     font-weight: 200;
     text-decoration: none;
     color: white;
+    transition: all 0.3s;
 
 }
 
 .link-nav:hover{
     opacity: 1;
-    font-weight: 500;
-    transition: 0.2s;
+    
 }
 
 .btn{
     font-family: "Chakra Petch";
     width: 126px;
-    height: 52px;
-    border: solid   1px ;
+    height: 48px;
+    border: solid 1px ;
     border-image: linear-gradient(45deg, #0CBAF1, #E95CE9) 1;
-    color: white;
-    font-size: 17px;
+    color: rgba(255, 255, 255);
+    font-size: 16px;
     cursor: pointer;
 }
 
 .nav-btn{
-    background-color: #ffffff00
+    background-color: #ffffff00;
+    position: relative;
+    color: rgba(255, 255, 255, 0.703);
 }
-.nav-btn:hover{
-    background: linear-gradient(45deg, #0CBAF1, #E95CE9);
+
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #0CBAF1, #E95CE9);
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.nav-btn:hover::before{
+    opacity: 1;
+    z-index: -1;
 }
 /* nav-section */
 
@@ -146,7 +159,26 @@ body{
     letter-spacing: 1.5px;
     line-height: 14px;
     margin-top: 12px;
+    position: relative;
 }
+
+.btn-main__section::before {
+  content: "";
+  width: 206px;
+  height: 50px;
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0CBAF1, #E95CE9);
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.btn-main__section:hover::before {
+  opacity: 1;
+}
+
 
 .avatar-clients{
     display: flex;
@@ -212,10 +244,21 @@ body{
     background-color: #21232E;
     position: relative;
     margin-left: 63px;
-
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.video-section img:nth-child(1){
+.video-section .video-section__img{
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.video-section:hover .video-section__img{
+    width: 140px;
+    height: 140px;
+}
+
+.video-section__img{
     width: 128px;
     height: 128px;
     position: absolute;
@@ -230,8 +273,16 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    transition: 0.2s ease;
 }
+
+.video-section img:nth-child(2):hover{
+    width: 33px;
+    height: 33px;
+}
+
 
 .main-second__section img:nth-child(2){
     width: 526px;
@@ -362,15 +413,57 @@ body{
 }
 
 
+
+
+
+
+
+
+
 .video-section__second{
-    position: absolute;
     margin-top: -100px;
     margin-left: 300px;
 }
 
-.video-section__second img:nth-child(1){
+.second-video__img{
     width: 130px;
     height: 88px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-out;
+}
+
+
+.video-section:hover .second-video__img{
+    width: 140px;
+    height: 98px;
+}
+
+
+
+
+
+.second-btn{
+    position: relative;
+}
+
+.second-btn::before {
+  content: "";
+  width: 206px;
+  height: 50px;
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0CBAF1, #E95CE9);
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.second-btn:hover::before {
+  opacity: 1;
 }
 
 .second-poll{
@@ -431,6 +524,10 @@ body{
     align-items: center;
 }
 
+.contact-button img{
+    transition: 0.2s ease-out;
+}
+
 .contact-button:nth-child(1) .contact-button__img{
     width: 18px;
     height: 14px;
@@ -446,6 +543,23 @@ body{
 .contact-button:nth-child(4) .contact-button__img{
     width: 21px;
     height: 21px;
+}
+
+.contact-button:nth-child(1):hover .contact-button__img{
+    width: 24px;
+    height: 18px;
+}
+.contact-button:nth-child(2):hover .contact-button__img{
+    width: 14px;
+    height: 24px;
+}
+.contact-button:nth-child(3):hover .contact-button__img{
+    width: 26px;
+    height: 26px;
+}
+.contact-button:nth-child(4):hover .contact-button__img{
+    width: 24px;
+    height: 24px;
 }
 
 .footer__section{
@@ -502,7 +616,6 @@ body{
     opacity: 0.8;
 }
 
-
 .line{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -511,14 +624,6 @@ body{
     background: linear-gradient(45deg, #0CBAF1, #E95CE9);
     opacity: 0.5;
 }
-
-
-
-
-
-
-
-
 
 
 
