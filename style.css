@@ -58,7 +58,7 @@ body{
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    gap: 40px;
+    gap: 80px;
 }
 
 .logo{
@@ -625,15 +625,130 @@ body{
     opacity: 0.5;
 }
 
-
-
-
-
-
-
-
 /* footer */
 
+
+
+
+
+.slide-nav__first{
+    padding: 13px;
+    top: 40px;
+    width: 155px;
+    height: 120px;
+    background-color: #252532;
+    position: absolute;
+    border: solid 1px;
+    border-image: linear-gradient(46deg, #ffffff4a, #252532) 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: nav-open__first 1s;
+}
+
+.slide-nav__second{
+    padding: 13px;
+    top: 40px;
+    width: 155px;
+    height: 70px;
+    background-color: #252532;
+    position: absolute;
+    border: solid 1px;
+    border-image: linear-gradient(46deg, #ffffff4a, #252532) 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: nav-open__second 1s;
+}
+
+.slide-nav__second a{
+    text-decoration: none;
+    color: #ffffffb5;    
+    display: block;
+    user-select: none;
+    animation: a-open__nav 2s;
+}
+
+.slide-nav__first a{
+    text-decoration: none;
+    color: #ffffffb5;    
+    display: block;
+    user-select: none;
+    animation: a-open__nav 2s;
+}
+
+.hidden{
+    display: none;
+}
+
+.nav-slider{
+    display: flex;
+}
+
+.link-nav{
+    display: inline-flex;
+    align-items: center; 
+}
+
+.icon-slider{
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-image: url("./img/vectors/down-arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.icon-slider:hover{
+    opacity: 1;
+}
+
+.icon-slider-active{
+    transform: scaleY(-1);
+}
+
+
+
+
+
+@keyframes nav-open__first {
+    0% {
+        height: 0;
+        width: 155px;
+    }
+    100%{
+        height: 120px;
+    }
+}
+
+@keyframes nav-open__second {
+    0% {
+        height: 0;
+        width: 155px;
+    }
+    100%{
+        height: 70px;
+    }
+}
+
+@keyframes a-open__nav{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slide-close{
+    to{
+        height: 0;
+    }
+}
 
 
 

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="./script/slider-nav.js" defer></script>
 </head>
 <body>
     <img src="./img/vectors/Vector.png" alt="" class="vector">
@@ -22,23 +23,36 @@
                     <img src="./img/vectors/logo.png" class="logo" alt="">
                 </a>
                 <nav class="nav">
-                    <ul>
-                        <a href="#" class="link-nav active">Home</a>
-                    </ul>
-                    <ul>
+                    <div>
+                        <a href="#" class="link-nav">Home</a>
+                    </div>
+                    <div>
                         <a href="#" class="link-nav">About us</a>
-                    </ul>
-                <ul>
+                    </div>
+                    <div>
                         <a href="#" class="link-nav">Service</a>
-                    </ul>
-                    <ul>
+                    </div>
+
+                    <div class="nav-slider">
                         <a href="#" class="link-nav">Page</a>
-                        <div class="slide-nav"></div>
-                    </ul>
-                    <ul> 
+                        <span class="icon-slider" data-tabs-handler="1"></span>
+                        <div class="slide-nav__first slide-nav hidden" data-tabs-field="1">
+                            <a href="">Pricing Plan</a>
+                            <a href="">FAQ</a>
+                            <a href="">Tems & Conditions</a>
+                            <a href="">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-slider"> 
                         <a href="#" class="link-nav">Blog</a>
-                        <div class="slide-nav"></div>
-                    </ul>
+                        <span class="icon-slider" data-tabs-handler="2"></span>
+                        <div class="slide-nav__second slide-nav hidden" data-tabs-field="2">
+                            <a href="">Resent articles</a>
+                            <a href="">Our Team</a>
+                            <a href="">Detail Service</a>
+                        </div>
+                    </div>
                 </nav>
                 <button class="nav-btn btn">Contact us</button>
             </div>
